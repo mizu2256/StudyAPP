@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>期末テスト対策サイト</title>
+    <style>
+        body { font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif; background-color: #f7f9fc; color: #333; margin: 0; padding: 0; }
+        .container { width: 95%; max-width: 1300px; margin: 20px auto; padding: 25px; background: #fff; box-shadow: 0 6px 15px rgba(0,0,0,0.1); border-radius: 12px; }
+        h1 { color: #007bff; text-align: center; border-bottom: 4px solid #007bff; padding-bottom: 15px; margin-bottom: 30px; font-size: 2.2em; }
+        /* 修正点: 文言を削除し、タイトルのみにする */
+        h2 { color: #28a745; border-left: 6px solid #28a745; padding-left: 15px; margin-top: 50px; margin-bottom: 25px; font-size: 1.6em; }
+        
+        /* カウントダウン */
+        .countdown { text-align: center; font-size: 2.5em; color: #dc3545; font-weight: bold; margin: 30px 0; padding: 20px; background-color: #ffebe9; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .countdown strong { font-size: 1.2em; color: #cc0000; }
+
+        /* テスト範囲ボックス */
+        .range-box { padding: 20px; border-radius: 10px; margin-top: 20px; background-color: #d4edda; border: 1px solid #28a745; margin-bottom: 30px; }
+        .range-list { list-style: square; padding-left: 20px; line-height: 1.8; }
+
+        /* 教科別グリッド */
+        .subject-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+        .subject-card { background-color: #ffffff; border: 1px solid #ccc; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+        .subject-card h3 { background-color: #495057; color: #fff; margin: 0; padding: 12px; text-align: center; font-size: 1.3em; }
+
+        /* 画像でPDFを表示するエリア */
+        .subject-materials { padding: 15px; display: grid; gap: 15px; }
+        .material-link { display: block; text-decoration: none; color: #333; transition: transform 0.2s; }
+        .material-link:hover { transform: translateY(-3px); box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .material-link img { width: 100%; height: auto; border-radius: 5px; border: 1px solid #eee; }
+        .material-link p { margin-top: 5px; margin-bottom: 0; font-size: 0.95em; text-align: center; font-weight: bold; color: #007bff; }
+        
+        .placeholder-text { text-align: center; padding: 30px; color: #adb5bd; font-style: italic; }
+        
+        /* フォームエリア */
+        .form-explanation { text-align: center; margin-bottom: 20px; font-size: 1.1em; color: #6c757d; }
+        .form-embed-area { height: 600px; border: 1px solid #ccc; border-radius: 8px; overflow: hidden; background-color: #f8f9fa; line-height: 400px; text-align: center; font-style: italic;}
+
+        /* ★★★ 修正点: モバイル対応（メディアクエリ） ★★★ */
+        @media (max-width: 768px) {
+            /* 768px以下の画面幅（主にスマホ）に適用 */
+            .container { padding: 15px; }
+            h1 { font-size: 1.8em; }
+            h2 { font-size: 1.4em; margin-top: 30px; }
+            .countdown { font-size: 1.5em; padding: 15px; }
+            
+            /* 教科カードを縦に並べるように調整（グリッドの列数を減らす） */
+            .subject-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+            
+            /* フォームエリアの高さ調整（スマホで見やすく） */
+            .form-embed-area { height: 400px; }
+        }
+        
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>📚 期末テスト対策サイト 2025 🚀</h1>
+    
+    <div class="countdown" id="countdown-timer">
+        </div>
+
+    <h2>📝 テスト範囲一覧</h2>
+    <div class="range-box">
+        <ul class="range-list">
+            <li>**【数学】**：【テスト範囲をここに具体的に記載】</li>
+            <li>**【英語】**：【テスト範囲をここに具体的に記載】</li>
+            <li>*【管理者へ】各教科の範囲をここに書き込み、全員で共有しましょう！*</li>
+        </ul>
+    </div>
+    
+    <h2>📘 教科別 資料一覧</h2> 
+    
+    <div class="subject-grid">
+
+        <div class="subject-card">
+            <h3>現代文</h3>
+            <div class="subject-materials">
+                <div class="placeholder-text">資料を追加してください</div>
+            </div>
+        </div>
+        
+        <div class="subject-card"><h3>古文</h3><div class="subject-materials"><div class="placeholder-text">資料を追加してください</div></div></div>
+        <div class="subject-card"><h3>漢文</h3><div class="subject-materials"><div class="placeholder-text">資料を追加してください</div></div></div>
+        <div class="subject-card"><h3>数学</h3><div class="subject-materials"><div class="placeholder-text">資料を追加してください</div></div></div>
+        <div class="subject-card"><h3>地理</h3><div class="subject-materials"><div class="placeholder-text">資料を追加してください</div></div></div>
+        <div class="subject-card"><h3>日本史</h3><div class="subject-materials"><div class="placeholder-text">資料を追加してください</div></div></div>
+        <div class="subject-card"><h3>世界史</h3><div class="subject-materials"><div class="placeholder-text">資料を追加してください</div></div></div>
+        <div class="subject-card"><h3>生物</h3><div class="subject-materials"><div class="placeholder-text">資料を追加してください</div></div></div>
+        <div class="subject-card"><h3>物理</h3><div class="subject-materials"><div class="placeholder-text">資料を追加してください</div></div></div>
+        <div class="subject-card"><h3>化学</h3><div class="subject-materials"><div class="placeholder-text">資料を追加してください</div></div></div>
+        <div class="subject-card"><h3>地学</h3><div class="subject-materials"><div class="placeholder-text">資料を追加してください</div></div></div>
+        <div class="subject-card"><h3>情報</h3><div class="subject-materials"><div class="placeholder-text">資料を追加してください</div></div></div>
+        
+    </div>
+
+    <h2>📩 資料提供・お問い合わせ</h2>
+    <div class="form-explanation">
+        <p>ご要望・ご不満などのお問い合わせ、プリント・ノート等ご提供いただける方はこちらからお願いします。</p>
+    </div>
+    <div class="form-embed-area">
+        【ここに**Googleフォーム**の埋め込みコードを挿入してください】
+        <p style="color:#6c757d;">フォームの埋め込みコードを貼り付けることで表示されます</p>
+    </div>
+
+</div>
+
+<script>
+    // 💡 カウントダウンの日時設定: 12月10日 08:00:00 に設定
+    const targetDate = new Date("December 10, 2025 08:00:00").getTime(); 
+
+    const countdownElement = document.getElementById('countdown-timer');
+
+    function updateCountdown() {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+            countdownElement.innerHTML = "✨ **テスト開始！** 全力を尽くそう！ ✨";
+            clearInterval(timerInterval); // カウントダウンを停止
+            return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = `期末テストまで：<strong>${days}</strong>日 <strong>${hours}</strong>時間 <strong>${minutes}</strong>分 <strong>${seconds}</strong>秒`;
+    }
+
+    // 1秒ごとにカウントダウンを更新し、即時表示
+    const timerInterval = setInterval(updateCountdown, 1000);
+    updateCountdown(); 
+</script>
+
+</body>
+</html>
